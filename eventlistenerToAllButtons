@@ -1,0 +1,22 @@
+<html lang="en">
+<body>
+ <div id="output">There is no output yet!!! </div>
+ <button id="btnA" class="btn">Button A</button>
+ <button id="btnB" class="btn">Button B</button>
+ <button id="btnC" class="btn">Button C</button>
+<script>
+var btnClick = function(button) { 
+  var myOutput = document.getElementById("output");
+  myOutput.textContent = "You clicked the " +button.textContent; 
+//button.unbind('click');
+};  
+
+var buttons = document.getElementsByTagName('button');
+for (var i = 0; i < buttons.length; i++) {
+    const button = buttons[i];
+    button.addEventListener("click", function(){btnClick(button)});
+}
+      
+</script>
+</body>
+</html>
